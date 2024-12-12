@@ -1,0 +1,46 @@
+.image-section {
+    margin-bottom: -100px;
+    padding-bottom: 100px;
+    background-image: linear-gradient(180deg, $sub-secondary-color 0%, $secondary-color 100%);
+
+    .ev-image {
+        margin-top: -50px;
+        display: flex;
+        z-index: 2;
+        position: relative;
+
+        .ev-left-img {
+            width: 76%;
+            margin: 0px auto;
+            text-align: center;
+        }
+
+        .ev-right-img {
+            margin-top: -70px;
+            width: 19%;
+            text-align: center;
+        }
+
+        @include bp(lgx) {
+            .ev-left-img {
+                margin: 0;
+                width: 80%;
+            }
+
+            .ev-right-img {
+                margin-left: 0;
+                margin-right: 0;
+                width: 20%;
+            }
+        }
+        @include bp(smx) {
+            .ev-left-img  {
+                width: 80%;
+            }
+            .ev-right-img {
+                margin-top: 0;
+                width: 20%;
+            }
+        }
+    }
+}

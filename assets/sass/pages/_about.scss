@@ -1,0 +1,201 @@
+.about-section {
+    padding-bottom: 110px;
+
+    @include bp(mdx) {
+        padding-bottom: 60px;
+    }
+
+    .about-left-image {
+        margin-right: 28px;
+
+        @include bp(mdx) {
+            margin-right: 0;
+        }
+    }
+
+    .top-left-img {
+        margin-right: 70px;
+        border-radius: 5px;
+        overflow: hidden;
+
+        @include bp(lgx) {
+            margin-right: 0;
+        }
+    }
+
+    .bottom-content {
+        position: relative;
+        z-index: 1;
+        margin-top: -60px;
+
+
+        .img-year-content {
+            padding: 30px;
+            border-radius: 5px;
+            border: 6px solid #fff;
+            display: inline-block;
+            background-color: $secondary-color;
+            color: $light-color;
+            text-align: center;
+            position: absolute;
+            top: 40px;
+            left: 30px;
+            z-index: 2;
+
+            h2 {
+                margin-bottom: 0;
+                color: $light-color;
+            }
+
+            h6 {
+                margin-bottom: 0;
+                color: $sub-title-color;
+            }
+        }
+
+        .bottom-right-img {
+            position: relative;
+            z-index: 1;
+            margin-left: 132px;
+            border-style: solid;
+            border-width: 8px 0px 0px 8px;
+            border-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+
+            img {
+                position: relative;
+                z-index: -1;
+                display: inline-block;
+
+            }
+
+            &:before {
+                background-color: #052730;
+                content: "";
+                display: block;
+                opacity: 0.5;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                position: absolute;
+                z-index: 0;
+            }
+
+            .video-button {
+                position: absolute;
+                z-index: 2;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                a {
+                    height: 80px;
+                    width: 80px;
+                    line-height: 80px;
+                    background-color: $secondary-color;
+                    color: $light-color;
+
+                    &:hover {
+                        background-color: $anchor-hover-color;
+                    }
+
+                    &:before {
+                        box-shadow: 0 0 0 0 rgba($primary-color, 1.0);
+                    }
+                }
+            }
+        }
+
+        @include bp (xsx) {
+            .img-year-content {
+                left: 9px;
+                top: 30px;
+            }
+            .bottom-right-img {
+                margin-left: 20%;
+            }
+        }
+    }
+
+    .about-right-desc {
+        margin-left: 48px;
+
+        @include bp(lgx) {
+            margin-left: 0;
+            margin-top: 40px;
+        }
+
+        .section-head {
+            margin-bottom: 25px;
+        }
+
+        .type-of-trait {
+            .trait-type {
+                padding: 25px;
+                box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.15);
+                background-color: $light-color;
+                border-radius: 5px;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+
+                .trait-icon {
+                    margin-right: 25px;
+                    text-align: center;
+
+                    i {
+                        font-size: 40px;
+                        color: $light-color;
+                        background-color: $primary-color;
+                        height: 80px;
+                        width: 80px;
+                        line-height: 80px;
+                        display: inline-block;
+                        border-radius: 50%;
+                    }
+                }
+
+                .trait-detail {
+                    .trait-title {
+                        margin-bottom: 8px;
+                    }
+
+                    .trait-describe {
+                        color: #787878;
+                    }
+                }
+
+                @include bp(xsx) {
+                    padding: 25px 10px;
+
+                    .trait-icon {
+                        margin-right: 10px;
+
+                        i {
+                            height: 70px;
+                            width: 70px;
+                            line-height: 70px;
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about-home-charging {
+    padding: 110px 0;
+
+    @include bp(mdx) {
+        padding: 60px 0;
+    }
+}

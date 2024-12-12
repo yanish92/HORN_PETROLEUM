@@ -1,0 +1,20 @@
+.single-page-reserve-section {
+    margin-bottom: 110px;
+
+    @include bp(mdx) {
+        margin-bottom: 45px;
+    }
+
+    .single-feature-img {
+        overflow: hidden;
+        border-radius: 5xp;
+    }
+
+    .page-content {
+        ul {
+            li {
+                margin-bottom: 8px;
+            }
+        }
+    }
+}

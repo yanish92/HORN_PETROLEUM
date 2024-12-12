@@ -1,0 +1,67 @@
+.testimonial-section-page {
+    padding: 110px 0;
+    background-color: #E7F0F7;
+
+    @include bp(mdx) {
+        padding: 60px 0;
+    }
+
+    .client-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 35px;
+        grid-column-gap: 37px;
+
+        @include bp(lgx) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include bp(mdx) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .client-content {
+            padding: 50px;
+            background-color: $light-color;
+            box-shadow: 0px 10px 25px 10px rgba(0, 0, 0, 0.03);
+            border-radius: 25px;
+
+            @include bp(smx) {
+                padding: 40px;
+            }
+
+            .client-info {
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+
+                .client-img {
+                    height: 85px;
+                    width: 85px;
+                    overflow: hidden;
+                    border-radius: 50%;
+                    margin-right: 20px;
+                    text-align: center;
+                }
+
+                .author-info {
+                    .author-name {
+                        margin-bottom: 5px;
+                    }
+
+                    .author-occupation {
+                        font-size: 13px;
+                        font-weight: 500;
+                        line-height: 1.2;
+                        color: rgba(0, 0, 0, .5);
+                    }
+                }
+            }
+
+            .client-review {
+                margin-bottom: 0;
+                color: #787878;
+            }
+        }
+    }
+}

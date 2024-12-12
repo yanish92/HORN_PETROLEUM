@@ -1,0 +1,136 @@
+.home-service {
+    padding: 120px 0 96px;
+    background-image: url(assets/img/img4.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    background-attachment: fixed;
+
+    @include bp(mdx) {
+        padding: 60px 0;
+    }
+
+    .overlay {
+        background-color: $primary-color;
+        opacity: 0.95;
+    }
+
+    .section-head {
+        color: $light-color;
+        @include bp(smx) {
+            margin-bottom: 20px;
+        }
+
+        .title-divider-center {
+            margin-bottom: 25px;
+        }
+    }
+
+    .service-catalog {
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        align-items: center;
+
+
+        .left-service-list {
+            margin-right: 50px;
+
+            @include bp(lgx) {
+                margin-right: 0;
+            }
+        }
+
+        .right-service-list {
+            margin-left: 50px;
+
+            @include bp(lgx) {
+                margin-left: 0;
+            }
+        }
+
+        .service-list {
+            .service-content {
+                margin-bottom: 65px;
+                @include bp (mdx) {
+                    margin-bottom: 35px;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .service-title {
+                    display: flex;
+                    color: $light-color;
+                    align-items: center;
+                    margin-bottom: 12px;
+
+                    h6 {
+                        height: 34px;
+                        width: 34px;
+                        text-align: center;
+                        margin-bottom: 0;
+                        line-height: 34px;
+                        margin-right: 15px;
+                        border-radius: 50%;
+                        background-color: $anchor-hover-color;
+                        color: $light-color;
+                    }
+
+                    h5 {
+                        margin-bottom: 0;
+
+                        a {
+                            color: $light-color;
+                        }
+
+                        &:hover {
+                            a {
+                                color: $hover-color;
+                            }
+                        }
+                    }
+                }
+
+                .service-desc {
+                    color: #E7F0F7;
+                    margin-bottom: 0;
+                }
+                @include bp(mdx) {
+                    text-align: center;
+                    .service-title {
+                        justify-content: center;
+                    }
+
+                }
+            }
+        }
+
+        .service-image {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+
+            .pattern-overlay {
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                opacity: 1;
+                background-image: url(assets/img/img15.png);
+            }
+        }
+
+        @include bp(mdx) {
+            grid-template-columns: auto;
+            justify-content: center;
+            grid-row-gap: 20px;
+            .left-service-list  {
+                margin-bottom: 20px;
+            }
+            .right-service-list  {
+                margin-top: 20px;
+            }
+        }
+    }
+}

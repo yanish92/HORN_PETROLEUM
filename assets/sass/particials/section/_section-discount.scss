@@ -1,0 +1,107 @@
+.home-coupon {
+    @include bp(smx) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .coupon-wrapper {
+        display: grid;
+        grid-template-columns: 68% auto;
+        align-items: center;
+
+        @include bp(mdx) {
+            grid-template-columns: 60% auto;
+        }
+
+        @include bp(smx) {
+            grid-template-columns: auto;
+            grid-row-gap: 20px;
+
+        }
+
+        .coupon-content {
+            margin-right: 100px;
+
+            @include bp(mdx) {
+                margin-right: 0;
+            }
+            @include bp(smx) {
+                margin-bottom: 40px;
+            }
+
+            .section-head {
+                margin-bottom: 30px;
+
+                .title-divider-right-white {
+                    margin-bottom: 15px;
+                }
+
+                p {
+                    color: $light-color;
+                    margin-right: 50px;
+                }
+            }
+        }
+
+        .coupon-offer {
+            padding: 130px 0 135px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+
+            @include bp(smx) {
+                padding: 50px 0;
+            }
+
+            .pattern-overlay {
+                background-image: url(assets/img/img10.png);
+                background-position: center center;
+                background-repeat: repeat-y;
+                background-size: contain;
+                opacity: 0.8;
+
+                @include bp (smx) {
+                    background-image: url(assets/img/img21.png);
+                    background-repeat: repeat-x;
+                }
+            }
+
+            .coupon-detail {
+                margin-right: 28px;
+                @include bp(mdx) {
+                    margin-right: 0;
+                    margin-bottom: 22px;
+                }
+
+                .discount-name {
+                    margin-bottom: 0;
+                    color: $text-color;
+                }
+
+                .discount-offer {
+                    // margin-bottom: 20px;
+                    font-size: 70px;
+                    font-weight: 700;
+                    line-height: 1;
+                    color: $light-color;
+
+                }
+
+                h5 {
+                    color: $sub-title-color;
+                    display: inline;
+                    margin-bottom: 0;
+
+                    @include bp(mdx) {
+                        display: inherit;
+                    }
+                }
+
+                .discount-title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,172 @@
+.contact-page-section {
+    margin-bottom: 110px;
+
+    @include bp (mdx) {
+        margin-bottom: 60px;
+    }
+
+    .contact-deatil-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 30px;
+        grid-column-gap: 45px;
+        margin-bottom: 80px;
+
+        @include bp (lgx) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 20px;
+
+            .item-3 {
+                grid-column: 1/span 2;
+            }
+        }
+
+        @include bp(mdx) {
+            margin-bottom: 60px;
+        }
+
+        @include bp (smx) {
+            grid-template-columns: repeat(1, 1fr);
+
+            .item-3 {
+                grid-column: 1/span 1;
+            }
+        }
+
+        .connection-detail-wrapper {
+            padding: 30px;
+            border-radius: 5px;
+            border: 2px solid #d9d9d9;
+            text-align: center;
+
+            .contact-icon {
+                margin-bottom: 10px;
+
+                i {
+                    font-size: 40px;
+                    width: 80px;
+                    height: 80px;
+                    line-height: 80px;
+                    color: $light-color;
+                    background-color: $secondary-color;
+                    text-align: center;
+                    border-radius: 50%;
+                }
+
+            }
+
+            &:nth-child(even) {
+                .contact-icon {
+                    i {
+                        background-color: $primary-color;
+                    }
+                }
+            }
+
+            .contact-info-list {
+                .contact-list-title {
+                    margin-bottom: 10px;
+                }
+
+                ul {
+                    padding: 0;
+                    margin: 0;
+                    list-style-type: none;
+
+                    li {
+                        margin-bottom: 10px;
+                        color: #787878;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 1.1;
+
+                        a {
+                            color: #787878;
+
+                            &:hover {
+                                color: $anchor-hover-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-form-inner {
+        .contact-detail-container {
+            margin-right: 38px;
+
+            @include bp(lgx) {
+                margin-right: 0;
+            }
+
+            .section-head {
+                .widget_social {
+                    .socialgroup {
+                        ul {
+                            li {
+                                a {
+                                    border-radius: 50%;
+                                    border: none;
+                                    background-color: $primary-color;
+                                    color: $light-color;
+                                    font-size: 14px;
+                                    width: 37px;
+                                    height: 37px;
+                                    line-height: 37px;
+
+                                    &:hover {
+                                        background-color: $anchor-hover-color;
+                                        border: none;
+                                    }
+                                    @include bp(mdx) {
+                                        width: 32px;
+                                        height: 32px;
+                                        line-height: 32px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .map-section {
+                border-radius: 5px;
+                overflow: hidden;
+            }
+        }
+
+        .contact-from-wrap {
+            margin-left: 18px;
+            padding: 50px;
+            box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.05);
+            border-radius: 5px;
+
+            .contact-from {
+                p {
+                    margin-bottom: 25px;
+
+                    input:not([type="submit"]) {
+                        width: 100%;
+                    }
+
+                    input[type="submit"] {
+                        padding: 16px 35px;
+                    }
+                }
+
+            }
+
+            @include bp(smx) {
+                padding: 50px 20px;
+            }
+
+            @include bp(lgx) {
+                margin-top: 30px;
+                margin-left: 0;
+            }
+        }
+    }
+}

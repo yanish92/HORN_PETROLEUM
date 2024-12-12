@@ -1,0 +1,36 @@
+// Theme
+$primary-color: #052730;
+$secondary-color: #05C09B;
+$sub-secondary-color:#3BE78E;
+$hover-color: #05C09B;
+$anchor-hover-color:#0B876F;
+$nav-color:#3BE78E;
+$title-color: #052730;
+$sub-title-color:#E7F0F7;
+$inner-title-color: #d9d9d9;
+$light-color: #ffffff;
+$dark-color: #111111;
+$divider-title-color: #a7a7a7;
+$text-color: #555555;
+$gray-color:#d9d9d9;
+$paragraph-color: #a7a7a7;
+
+//gradient color
+$gradient-color: radial-gradient(at top left, $sub-secondary-color 0%, $secondary-color 100%);
+$button-gradient-color: radial-gradient(at top left, $secondary-color 0%, $sub-secondary-color 50%, $sub-secondary-color 100%);
+$submit-gradient-color: radial-gradient(at top left, $sub-secondary-color 0%,$secondary-color 50%, $secondary-color 100%);
+// Default
+$danger-color: #D9534F;
+$info-color: #5BC0DE;
+$success-color: #5CB85C;
+$warning-color: #F0AD4E;
+$disable-color: #CCC;
+
+
+// Font Family
+$primary-font: 'Poppins', sans-serif;
+$title-font:  'Poppins', sans-serif;
+
+// Line Hight
+$body-line-height: 1.2;
+$title-line-height: 1.3;

@@ -1,0 +1,108 @@
+%base-button {
+	@include font-size (16);
+	line-height: 1.2;
+	padding: 16px 25px;
+	font-weight: 500;
+	font-family: $title-font;
+	text-transform: uppercase;
+	@include bp(smx) {
+		padding: 12px 20px;
+	}
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: none;
+	color: #ffffff;
+	cursor: pointer;
+	padding: 16px 25px;
+	font-weight: 500;
+	@include border-radius(5px);
+	@include transition(background-color 0.3s);
+	border: none;
+	// this is for the gradient
+	background-image: $submit-gradient-color;
+	color: $light-color;
+	background-size: 400%;
+	background-position: left;
+	transition: background-position 0.4s ease-out;
+    &:hover,
+    &:active,
+    &:focus {
+    	background-color: $light-color;
+    	background-position: right;
+    }
+}
+
+.button-round-primary,
+.button-round-secondary,
+.button-round-white,
+.button-round-gradient,
+.button-round-submit-gradient {
+	@include border-radius(5px);
+	border: none;
+	@extend %base-button;
+	color: $primary-color;
+	display: inline-block;
+	position: relative;
+	@include transition(background-color 0.4s, color 0.4s );
+}
+.button-round-primary {
+	background-color: $primary-color;
+	color: $light-color;
+}
+.button-round-secondary {
+	background-color: $secondary-color;
+	color: $light-color;
+}
+.button-round-white {
+	background-color: $light-color;
+	color: #111111;
+}
+.button-round-gradient {
+	background-image: $button-gradient-color;
+	color: $light-color;
+	background-size: 400%;
+	background-position: left;
+	transition: background-position 0.4s ease-out;
+}
+.button-round-submit-gradient {
+	background-image: $submit-gradient-color;
+	color: $light-color;
+	background-size: 400%;
+	background-position: left;
+	transition: background-position 0.4s ease-out;
+}
+// button hover
+.button-round-primary,
+.button-round-secondary,
+.button-round-white {
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $hover-color;
+		color: $light-color;
+	}
+}
+.button-round-gradient,
+.button-round-submit-gradient {
+	&:hover,
+	&:focus,
+	&:active {
+		color: $light-color;
+		background-position: right;
+	}
+}
+.button-text {
+	color: #0E3500;
+	font-weight: 600;
+	position: relative;
+	line-height: 1.2;
+	@include transition(all 0.4s);
+	&:hover,
+	&:focus,
+	&:active {
+		color: $primary-color;
+	}
+}

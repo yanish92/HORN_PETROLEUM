@@ -1,0 +1,131 @@
+.home-charging {
+    padding: 120px 0 152px;
+
+    @include bp(mdx) {
+        padding: 60px 0 100px;
+    }
+
+    background-color: #E7F0F7;
+
+    .section-head {
+        margin-bottom: 20px;
+    }
+
+    .charging-procudure {
+        padding: 50px 0 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        position: relative;
+        z-index: 1;
+         @include bp (mdx) {
+            padding: 40px 0 10px;
+        }
+        @include bp (xsx) {
+            padding: 20px 0 10px;
+        }
+        .charge-step {
+            margin: 0 40px;
+
+            @include bp(lgx) {
+                margin: 0 20px;
+            }
+
+            &:nth-child(even) {
+                margin-top: 80px;
+
+                @include bp (smx) {
+                    margin-top: 0;
+                }
+            }
+
+            .charging-step-img {
+                border-radius: 50%;
+                overflow: hidden;
+                margin-bottom: 20px;
+                text-align: center;
+                aspect-ratio: 1 / 1;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .step-content {
+                text-align: center;
+
+                .step-content-title {
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    color: $text-color;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .upper-arrow {
+            background-image: url(assets/img/img14.png);
+            background-repeat: no-repeat;
+            background-position: 23% 13%;
+        }
+
+        .right-side {
+            background-position: 83% 13%;
+        }
+
+        .bottom-arrow {
+            background-image: url(assets/img/img13.png);
+            background-repeat: no-repeat;
+            background-position: 53% 97%;
+        }
+
+        .left-side {
+            display: none;
+            background-image: url(assets/img/img35.png);
+            background-repeat: no-repeat;
+        }
+
+        @include bp(mdx) {
+            grid-template-columns: repeat(2, 1fr);
+
+            .upper-arrow {
+                background-position: 60% 6%;
+            }
+
+            .right-side {
+                display: none;
+            }
+
+            .bottom-arrow {
+                background-position: 40% 94%;
+
+            }
+
+            .left-side {
+                display: inherit;
+                background-position: 40% 45%;
+            }
+        }
+
+        @include bp(smx) {
+            grid-template-columns: auto;
+            grid-row-gap: 50px;
+
+            .upper-arrow,
+            .right-side,
+            .bottom-arrow {
+                display: none;
+            }
+
+            .charge-step {
+                margin: 0 10px;
+
+                &:nth-child(odd) {
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+}

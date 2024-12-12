@@ -1,0 +1,86 @@
+.home-banner {
+    background-image: url(assets/img/img18.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    min-height: 848px;;
+
+    .overlay {
+        background-color: $primary-color;
+        opacity: 0.9;
+    }
+
+    .banner-content {
+        padding-top: 155px;
+        padding-bottom: 155px;
+        text-align: center;
+        color: #fff;
+
+        .banner-title {
+            font-size: 70px;
+            font-weight: 700;
+            margin-bottom: 35px;
+            color: $light-color;
+
+            .title-highlight {
+                background-color: #fff;
+                color: $primary-color;
+                padding: 0 10px;
+                border-radius: 5px;
+                display: inline-block;
+            }
+        }
+
+        .title-divider-center {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 40px;
+        }
+
+        .banner-text {
+            margin-bottom: 35px;
+        }
+    }
+
+    @include bp(lgx) {
+        .banner-content {
+            .banner-title {
+                font-size: 58px;
+            }
+        }
+    }
+
+    @include bp(mdx) {
+        min-height: 580px;
+
+        .banner-content {
+            padding: 80px 0 120px;
+
+            .banner-title {
+                font-size: 46px;
+            }
+        }
+    }
+
+    @include bp(smx) {
+        min-height: 480px;
+
+        .banner-content {
+            padding: 80px 0 120px;
+
+            .banner-title {
+                font-size: 28px;
+                margin-bottom: 25px;
+            }
+
+            .title-divider-center,
+            .banner-text {
+                margin-bottom: 25px;
+            }
+        }
+
+    }
+}

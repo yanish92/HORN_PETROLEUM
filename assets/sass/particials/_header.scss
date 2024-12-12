@@ -1,0 +1,466 @@
+.site-header {
+    background-color: $primary-color;
+    width: 100%;
+    z-index: 10;
+}
+
+/*--- top header css start ---*/
+.top-header {
+    padding: 21px 0px;
+    background-color: #E7F0F7;
+
+    @include bp(smx) {
+        padding: 10px 0;
+    }
+}
+
+.header-contact-info {
+    margin-right: 45px;
+
+    @include bp(lgx) {
+        margin-right: 0px;
+    }
+
+    @include bp(smx) {
+        display: none;
+    }
+
+    ul {
+        @include font-size(0);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            @include font-size(13);
+            padding: 0 15px;
+
+            &:last-child {
+                padding-right: 0;
+            }
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            @include bp(lgx) {
+                padding: 0 40px;
+            }
+
+            @include bp(mdx) {
+                padding: 0 10px;
+            }
+
+            [class*="fa-"] {
+                margin-right: 5px;
+            }
+
+            a {
+                color: #f8f8f8;
+                display: flex;
+                align-items: center;
+                font-size: 13px;
+                line-height: 1.2;
+                @include transition(color 0.4s linear);
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $hover-color;
+
+                    .icon {
+                        i {
+                            color: $light-color;
+                            background-color: $anchor-hover-color;
+                            border-color: $anchor-hover-color;
+                        }
+                    }
+                    .details-content {
+                        h6{
+                            color: $anchor-hover-color;
+                        }
+                    }
+                }
+            }
+
+            .icon {
+                i {
+                    color: $secondary-color;
+                    font-size: 22px;
+                    width: 45px;
+                    height: 45px;
+                    position: relative;
+                    display: block;
+                    line-height: 41px;
+                    border-radius: 50%;
+                    border: 1px solid $secondary-color;
+                    text-align: center;
+                    transition: all 0.4s ease-out;
+                }
+            }
+
+            .details-content {
+                margin-left: 15px;
+
+                .content-title {
+                    font-size: 13px;
+                    line-height: 1.2;
+                    font-weight: 500;
+                    color: $text-color;
+                    margin-bottom: 9px;
+                    display: inline-block;
+                }
+
+                @include bp(mdx) {
+                    margin-left: 9px;
+                }
+
+                h6 {
+                    margin-bottom: 0;
+                }
+
+            }
+        }
+    }
+}
+
+.header-social {
+    @include inline-flex();
+    @include align-content (center);
+    @include align-items (center);
+
+    li {
+        margin: 0 3px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @include bp(xsx) {
+            margin: 0 2px;
+        }
+    }
+
+    a {
+        i {
+            font-size: 14px;
+            font-weight: 400;
+            color: $primary-color;
+            line-height: 30px;
+            height: 31px;
+            width: 31px;
+            background-color: $light-color;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            transition: all 0.3s;
+
+            @include bp(xsx) {
+                font-size: 12px;
+                line-height: 25px;
+                height: 26px;
+                width: 26px;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            i {
+                color: $light-color;
+                background-color: $hover-color;
+            }
+        }
+
+    }
+
+    @include bp(lgx) {
+        padding: 8px 0;
+    }
+}
+
+.header-search-icon {
+    @include inline-flex();
+    @include align-content (center);
+    @include align-items (center);
+
+    .search-icon {
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        color: $primary-color;
+        padding: 0;
+        font-size: 17px;
+
+        &:hover,
+        &:focus {
+            outline: none;
+            color: $hover-color;
+        }
+
+        @include bp(lgx) {
+            // border-width: 0 1px;
+            // border-style: solid;
+            // border-color: rgba(255, 255, 255, 0.25);
+            padding: 15px;
+        }
+    }
+
+    @include bp(smx) {
+        margin-left: 0;
+
+        .search-icon {
+            padding-left: 12px;
+
+            i {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+/*--- header Logo css start ---*/
+.site-identity {
+    .site-title {
+        margin: 0;
+        line-height: 1.1;
+        @include font-size(28);
+
+        @include bp(lgx) {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        @include bp(smx) {
+            margin-bottom: 0px;
+        }
+    }
+
+    .site-description {
+        @include font-size(13);
+        margin-bottom: 0;
+    }
+
+    img {
+        max-width: 215px;
+        @include transition(opacity 0.4s linear);
+    }
+
+    a {
+        display: block;
+
+        &:hover,
+        &:focus,
+        &:active {
+            img {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    @include bp(smx) {
+        img {
+            max-width: 150px;
+        }
+    }
+}
+
+/*--------------------------------------------------------------
+>>> Main Header Menu
+----------------------------------------------------------------*/
+@import "menu";
+
+// side socal nav and btn 
+.header-btn {
+    @include flexbox();
+    white-space: nowrap;
+    margin-left: 25px;
+
+    a {
+        font-size: 16px;
+        padding: 20px 26px;
+        font-weight: 500;
+        line-height: 1.2;
+        border-radius: 0;
+    }
+
+    @include bp(smx) {
+        padding: 0;
+        margin: 0;
+
+        a {
+            padding: 15px 20px;
+        }
+    }
+}
+
+/*---  bottom header css ---*/
+.bottom-header {
+    padding: 0;
+    background-color: $light-color;
+
+    .logo-bottom-header {
+        display: none;
+    }
+}
+
+/*---  header search css ---*/
+.header-search-form {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include align-items(center);
+}
+
+.header-search-form {
+    background-color: rgba($dark-color, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    @include scale(0);
+    @include transition(transform 0.5s, opacity 0.5s, visibility 0.5s);
+    z-index: 999;
+
+    .header-search {
+        position: relative;
+    }
+
+    input[type="text"] {
+        background-color: $light-color;
+        color: #292929;
+        border: none;
+        width: 100%;
+        height: 52px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .search-close {
+        color: $secondary-color;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        @include font-size(18);
+        @include flexbox;
+        @include justify-content(center);
+        @include align-items(center);
+        @include transition(background-color 0.4s);
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $hover-color;
+        }
+    }
+
+    &.search-in {
+        opacity: 1;
+        visibility: visible;
+        @include scale(1);
+    }
+}
+
+/*---  fixed header css ---*/
+@import "fixed-header";
+/*---  mobile slick Nav css ---*/
+@import "../components/slick-nav";
+
+.mobile-menu-container {
+    background-color: $primary-color;
+}
+
+// upper header css
+.upper-header {
+    font-size: 13px;
+    line-height: 1.2;
+    padding: 8px 0;
+    font-weight: 500;
+    color: $light-color;
+    background-image: $gradient-color;
+
+    .header-banner-info {
+
+        p {
+            margin-bottom: 0;
+            font-weight: 400;
+            font-size: 15px;
+        }
+
+        .start-btn {
+            margin-left: 20px;
+            line-height: 1;
+
+            a {
+                padding: 5px 8px;
+                background-color: $light-color;
+                line-height: 1.2;
+                border-radius: 5px;
+                color: $text-color;
+                display: inline-block;
+                transition: all 0.3s;
+                font-size: 13px;
+                font-weight: 500;
+
+                &:hover {
+                    background-color: $anchor-hover-color;
+                    color: $light-color;
+                }
+            }
+        }
+
+        @include bp(lgx) {
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(231, 240, 247, 0.25);
+        }
+
+        @include bp (smx) {
+            p {
+                font-size: 11px;
+
+            }
+
+            .start-btn {
+                margin-left: 5px;
+                text-align: right;
+
+                a {
+                    padding: 4px 8px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        @include bp (xsx) {
+            .start-btn {
+                width: 50%;
+            }
+        }
+    }
+
+    .header-location {
+        i {
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        @include bp(lgx) {
+            padding-top: 10px;
+        }
+
+        @include bp(smx) {
+            font-size: 12px;
+
+            i {
+                font-size: 12px;
+            }
+        }
+    }
+}

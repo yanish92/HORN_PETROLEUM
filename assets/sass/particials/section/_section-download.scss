@@ -1,0 +1,107 @@
+.download-section {
+    background-image: url(assets/img/img5.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+    .overlay {
+        background-color: $primary-color;
+        opacity: 0.95;
+    }
+
+    .download-wrapper {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        align-items: center;
+
+        .download-content {
+            margin-right: 100px;
+            padding: 30px 0;
+            @include bp(mdx) {
+                margin-right: 0;
+            }
+
+            .section-head {
+                color: $light-color;
+
+                .title-divider-right {
+                    color: $light-color;
+                    margin-bottom: 15px;
+
+                    &:after {
+                        background-color: $light-color;
+                    }
+                }
+
+                .section-title-heading-white {
+                    margin-bottom: 35px;
+                    @include bp(mdx){
+                        margin-bottom: 25px;
+                    }
+                }
+
+                p {
+                    margin-right: 50px;
+                }
+            }
+
+            .app-store-image {
+                display: flex;
+
+                .store-icon {
+                    width: 148px;
+                    margin-right: 20px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        .download-image {
+            position: relative;
+            z-index: 1;
+
+            .pattern-overlay {
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                opacity: 1;
+                background-image: url(assets/img/img15.png);
+            }
+            .mobile-img {
+                text-align: center;
+                margin: -50px auto;
+            }
+        }
+        @include bp(smx) {
+            grid-template-columns: auto;
+            grid-row-gap: 30px;
+            .download-content {
+                margin-bottom: 30px;
+                .section-head {
+                    p {
+                        margin: 0;
+                    }
+                }
+                .app-store-image {
+                    .store-icon {
+                        margin-right: 0;
+                        margin-bottom: 10px;
+                    }
+
+                }
+            }
+            .download-image {
+                order: -1;
+                .mobile-img {
+                    margin: -50px 0 0;
+                    padding: 0 25px;
+                }
+            }
+        }
+    }
+}
